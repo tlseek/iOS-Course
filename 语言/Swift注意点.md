@@ -16,3 +16,28 @@
  textField.stringValue = Array(tokenArray[row].values)[0]
 
  ```
+
+2. 使用Array<(key:String, value:String)>
+```Swift
+let array:[(key:String, value:String)] = []
+ // 给NSTextField刷新上key
+ textField.stringValue = array[row].key
+ 
+ // 给NSTextField刷新上value
+ textField.stringValue = array[row].value
+```
+
+3. 使用Array<KeyValue>
+```Swift
+struct KeyValue {
+   var key:String
+   var value:String
+}
+let array:[KeyValue] = []
+ 
+ // 给NSTextField刷新上key
+ textField.stringValue = array[row].key
+ 
+ // 给NSTextField刷新上value
+ textField.stringValue = array[row].value
+```
